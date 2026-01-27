@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conway's Game of Life</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main>
+    <canvas id="canvas" style="cursor: pointer;"></canvas>
+    <p style="color: #666; font-size: 14px;">セルをクリックして初期状態を設定できます</p>
+  </main>
+  <aside>
+    <button id="toggleBtn">開始</button>
+    <button id="clearBtn">クリア</button>
+    <!-- ランダムボタンに関する記述 -->
+    <label for="randomSlider" class="control-label">初期生存率 <span
+        id="randomValue">50%</span></label>
+    <input id="randomSlider" type="range" min="0" max="1" step="0.125"
+      value="0.5"
+      oninput="randomValue.textContent = Math.round(this.value * 100) + '%'"
+      aria-label="初期生存率">
+    <button id="randomBtn">ランダム</button>
+    <!-- ランダムボタンに関する記述終わり -->
+  </aside>
+  <footer>
+    <small>制作：真田悠希</small>
+    <address>yuu.mat.930@gmail.com</address>
+  </footer>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
