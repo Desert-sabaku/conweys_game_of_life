@@ -66,10 +66,7 @@ function animate() {
 }
 
 function updateGenerationDisplay() {
-    const generationText = document.getElementById("generationText");
-    if (generationText) {
-        generationText.textContent = `Generation: ${game.generation}`;
-    }
+    document.title = `Generation: ${game.generation}`;
 }
 
 updateGenerationDisplay();
